@@ -10,7 +10,3 @@ for (const input of inputs) {
         author.value + ' says, "' + quote.value + '"')
   );
 }
-lengthInput.addEventListener(
-  "input",
-  () => (lengthOutput.textContent = lengthInput.value.length)
-);

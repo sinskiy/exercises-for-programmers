@@ -1,11 +1,11 @@
-# inputs
+# Inputs
 
-bill amount, tip percentage
+name
 
-# processes
+# Processes
 
-calculate the tip
+greet
 
-# outputs
+# Outputs
 
-tip amount, total amount
+greeting

@@ -1,1 +1,6 @@
-console.log(`Hello, ${prompt("What's your name?")}, nice to meet you!`);
+const lengthInput = document.querySelector("#length");
+const lengthOutput = document.querySelector(".length-output");
+lengthInput.addEventListener(
+  "input",
+  () => (lengthOutput.textContent = lengthInput.value.length)
+);

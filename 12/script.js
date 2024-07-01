@@ -18,5 +18,5 @@ function handleInput() {
 }
 
 function moneyAfterInvestment(principal, rate, years) {
-  return principal * (1 + rate * years);
+  return (principal * (1 + rate * years)).toFixed(2);
 }

@@ -9,15 +9,14 @@ const yearsInput = document.querySelector("#years");
 const worthContainer = document.querySelector(".worth");
 function handleInput() {
   const principal = Number(principalInput.value);
-  const rate = Number(rateInput.value);
+  const ratePercentage = Number(rateInput.value);
   const years = Number(yearsInput.value);
-  if (!principal || !rate || !years) return;
-  const months = years * 12;
-  const worth = moneyAfterInvestment(principal, rate, months);
+  if (!principal || !ratePercentage || !years) return;
+  const rate = ratePercentage / 100;
+  const worth = moneyAfterInvestment(principal, rate, years);
   worthContainer.textContent = worth;
 }
 
-function moneyAfterInvestment(principal, rate, months) {
-  // b(n) = b(1)*q(n - 1 )
-  return principal * (rate / 100) * (months - 1);
+function moneyAfterInvestment(principal, rate, years) {
+  return principal * (1 + rate * years);
 }
